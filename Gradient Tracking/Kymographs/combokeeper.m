@@ -30,17 +30,12 @@ for i = 1:size(keepers,2);
     combined{i,1}= cellsfixed{keepers(i),1};
     combined{i,4} = centroids{keepers(i),1};
     for t = 1:size(TLmask,1);
-        try
-            gfptemp = [];
-%            cherrytemp =[];
-            gfptemp = lineprof(gfpin{t,1},(TLmask{t,1}==keepers(i)),linethickness,0);
-%             cherrytemp = lineprof(cherryin{t,1},(TLmask{t,1}==keepers(i)), linethickness,0); 
-            profiles{i,1}(1:size(gfptemp,1),t) = gfptemp;
-%             profiles{i,2}(1:size(cherrytemp,1),t) = cherrytemp;
-        catch
-            disp(keepers(i))
-            continue
-        end
+        gfptemp = [];
+%         cherrytemp =[];
+        gfptemp = lineprof(gfpin{t,1},(TLmask{t,1}==keepers(i)),linethickness,0);
+%         cherrytemp = lineprof(cherryin{t,1},(TLmask{t,1}==keepers(i)), linethickness,0); 
+        profiles{i,1}(1:size(gfptemp,1),t) = gfptemp;
+%         profiles{i,2}(1:size(cherrytemp,1),t) = cherrytemp;
     end
     
 end
@@ -82,7 +77,7 @@ for i = 1:size(profiles,1);
 %             centeredprofiles{i,2}(prespace:postindex,t)= profiles{i,2}(1:postindex-prespace+1,t);
         else
             centeredprofiles{i,1}(:,t) = profiles{i,1}(:,t);
-%             centeredprofiles{i,2}(:,t) = profiles{i,1}(:,t);
+%             centeredprofiles{i,2}(:,t) = profiles{i,2}(:,t);
         end
     end
     
