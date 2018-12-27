@@ -1,16 +1,6 @@
 # Quantitative analysis of the yeast pheromone response pathway
 Code for analysis of experiments that quantify the yeast pheromone response
 
-## A Note for MBoC reviewers:
-
-We are currently compiling the code used by the different authors for their analyses and commenting it appropriately. 
-We will include: 
-
-* Code for Bem1-GFP kymographs, rose diagrams, and single cell traces
-* Code for the Fus3 translocation analysis
-* Code for the flow cytometry analysis using 'FlowCytometryTools' package
-* Code for the imaging cytometry analysis 
-
 ## Gradient Tracking
 
 Scripts used for the analysis of gradient tracking experiments done in microfluidic chambers
@@ -44,3 +34,15 @@ This notebook requires the following packages: numpy, pandas, math, and matplotl
 Single cell traces were generated using the manual tracking Plug-in in ImageJ
 
 These notebooks were developed by Amy E. Pomeroy. 
+
+## Translocation reporter
+
+1.To run the code, open the start_file_cyto_new.m and put in details in the scripts, like directory of the data, channel information. 
+
+e.g. 
+Folders{i} = '~/Desktop/Data/'
+BaseFileNameExample{i} = 'alphaFactor1um'
+
+2.For each data set, the code will generate several csv files contains the fluorescense information. The fluorescence intensity of nuclear and cyto has been calculated with  different method, as it shown in the csv file name ( e.g. mean.csv, median.csv stand for nuclear fluorescence intensity, cyto_mean.csv, cyto_median.csv stand for the cytoplasmic fluorescence intensity). 
+
+Code from Yang Li. 
