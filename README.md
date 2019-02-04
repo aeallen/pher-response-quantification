@@ -1,6 +1,16 @@
 # Quantitative analysis of the yeast pheromone response pathway
 Code for analysis of experiments that quantify the yeast pheromone response
 
+## Imaging Cytometry
+
+Imaging cytometry data analysis was performed using the 'Celigo Data Analysis' jupyter notebook. This notebook has the following requirements: numpy, matplotlib, seaborn, pandas, scipy, and glob. For an example data set please email pomeroy@unc.edu
+
+## Flow Cytometry
+
+Flow cytometry data analysis was performed using the 'FlowAnalysis' jupyter notebook. This notebook has the following requirements: wx, math, FlowCytometryTools, pandas os, numpy, matplotlib, scipy, andseaborn. The example data set is included. 
+
+For more information about the FlowCytometyTools package see the [FlowCytometryTools Github](https://github.com/eyurtsev/FlowCytometryTools). 
+
 ## Gradient Tracking
 
 Scripts used for the analysis of gradient tracking experiments done in microfluidic chambers
